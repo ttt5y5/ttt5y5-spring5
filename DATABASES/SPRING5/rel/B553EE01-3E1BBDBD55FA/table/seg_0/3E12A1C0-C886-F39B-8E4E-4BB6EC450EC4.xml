@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3E12A1C0-C886-F39B-8E4E-4BB6EC450EC4" schemaObject="472F5A6B-7588-246A-F1DE-D66147B2910F" name="TBL_BOARD_TYPE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD_TYPE</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 01:37:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판생성관리(NOTICE.GALLERY등등)]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BORAD_TYPE" id="22635ACE-E5FE-49A6-8F91-9F2649B8F8B8">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD_TYPE</sourceObjSchema>
+<sourceObjName>BORAD_TYPE</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 02:16:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판타입 (NOTICE,GALLERY)]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_NAME" id="44C9FDFE-A905-6DF4-B3E0-5E0D71F8F295">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD_TYPE</sourceObjSchema>
+<sourceObjName>BOARD_NAME</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 02:29:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[한글게시판이름]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_SUN" id="BD11F136-BA73-FA8D-C0BD-DDC5CE5F3ED0">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_BOARD_TYPE</sourceObjSchema>
+<sourceObjName>BOARD_SUN</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 02:34:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시판출력순서]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1A5D011-FBEA-7903-E98E-72C467770FEA" name="TBL_BOARD_TYPE_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD_TYPE_PK</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 02:16:01 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22635ACE-E5FE-49A6-8F91-9F2649B8F8B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC5218F2-6F71-FFAA-9CC1-9B2C4590B6A0" schemaObject="472F5A6B-7588-246A-F1DE-D66147B2910F" name="TBL_BOARD_TYPE_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_BOARD_TYPE_PK</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 07:19:34 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>F9F8347E-D58E-2533-9E19-FCE61D179713</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22635ACE-E5FE-49A6-8F91-9F2649B8F8B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

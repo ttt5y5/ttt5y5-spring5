@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="TBL_MEMBER" directorySegmentName="seg_0" id="A6240775-E82E-BE37-0693-521C2996EE00">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:13:47 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>472F5A6B-7588-246A-F1DE-D66147B2910F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>37AC0201-02A7-905D-889C-12BAA1423A3E</segment>
+<tableSpace>2F9D0E17-646E-AE2B-A645-16241F554685</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_PW" id="0791895F-3E50-D08C-EB55-11409355FDAA">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:15:28 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPDATE_DATE" id="1B5918C7-1BB2-CAFF-4732-0F5D1E696842">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:29:51 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="POINT" id="82381B41-0C8B-8343-34E5-67F9EEFB324E">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:19:14 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="9AF784B8-0951-9111-9A6B-293215A4D92E">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:15:24 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="A7150C72-B2D8-23B7-95B1-B883215A671C">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:17:45 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_NAME" id="BE34B68A-F55A-AFB9-5CF1-A5A35AEC042A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:17:45 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REG_DATE" id="CDA6EE7D-681F-D5F5-C5B7-5517994B3DB5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:29:28 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LEVELS" id="E8C171B9-45C0-A8AB-6F69-42B073FC9855">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:28:14 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENABLED" id="ED3B92CA-0F0E-21A2-9905-F761CF5A0D6F">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:20:03 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TBL_MEMBER_PK" id="6B0C54E8-2C37-5F3B-6042-E27577FEFAAC">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 07:19:34 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>472F5A6B-7588-246A-F1DE-D66147B2910F</schemaObject>
+<segment>44097564-BA8D-505B-8AF4-C72A5104F17D</segment>
+<tableSpace>2F9D0E17-646E-AE2B-A645-16241F554685</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TBL_MEMBER_PK" id="F3A4AB30-40C8-21C4-2A11-3F424461D3EB">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:15:28 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<segment>44097564-BA8D-505B-8AF4-C72A5104F17D</segment>
+<tableSpace>2F9D0E17-646E-AE2B-A645-16241F554685</tableSpace>
+<existingIndex>6B0C54E8-2C37-5F3B-6042-E27577FEFAAC</existingIndex>
+<indexSegment>44097564-BA8D-505B-8AF4-C72A5104F17D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

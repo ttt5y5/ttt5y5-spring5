@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SegmentOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SegmentOraclev10g" name="Storage6" directorySegmentName="seg_0" id="3F504403-8D32-5B20-ADCC-9EE5DC4574CD">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 07:19:34 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<scInitialExtent>65536</scInitialExtent>
+<scMaxExtents>2147483645</scMaxExtents>
+<scNextExtent>1048576</scNextExtent>
+</SegmentOraclev10g>

@@ -5,4 +5,12 @@
 <ownerDesignName>SPRING5</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>8C00C3BA-E0EF-D5E7-DEB3-926F33798E11</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E777404F-BFB3-BD34-4C22-224FEE1BCCA5">
+<designStoragePath>C:\egov\workspace\Sunho-spring5\DATABASES</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="1D9E3AE5-85EA-A675-5B24-D604BE4AF233">
+<designStoragePath>C:\egov\workspace\Sunho-spring5\DATABASES</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

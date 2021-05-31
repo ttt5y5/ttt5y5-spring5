@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BAC4F6DF-E6D4-AA21-7259-DA7CF68BBB73" schemaObject="472F5A6B-7588-246A-F1DE-D66147B2910F" name="TBL_ATTACH">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_ATTACH</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 04:57:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[첨부파일관련테이블]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SAVE_FILE_NAME" id="6248750F-5FBD-75BB-2DA1-DECB8DAC1BAE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>SAVE_FILE_NAME</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 04:59:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[물리적으로저장되는파일명(해시데이터)]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REAL_FILE_NAME" id="A7A143D4-3D71-9515-E4C9-1B392DD72B4F">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>REAL_FILE_NAME</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:00:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[한글파일명으로UI에서보이게]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_DATE" id="437B2F32-FB7F-3480-BB25-2808046967CC">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:04:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일자]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BNO" id="3F4E1F99-B9D1-D584-083D-D2DA67C46831">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:06:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[부모테이블의고유키]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="635AB676-B848-AFE6-6773-795502F27A33" referredColumn="ACC7A50E-DAD9-7743-E65B-17B47D94A80F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF3E6F4F-81C0-CB0D-13A5-99355AD2460C" name="TBL_ATTACH_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_ATTACH_PK</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 05:01:20 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6248750F-5FBD-75BB-2DA1-DECB8DAC1BAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="892C83C2-C420-DC62-6D94-8ACBDAF53C85" schemaObject="472F5A6B-7588-246A-F1DE-D66147B2910F" name="TBL_ATTACH_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_ATTACH_PK</sourceObjName>
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 07:19:34 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>4C766E39-1E9A-872B-7E01-5C78E2A42E68</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6248750F-5FBD-75BB-2DA1-DECB8DAC1BAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="678FBB6E-A5F9-58BD-92D5-B9CA66C5B739" name="TBL_ATTACH_TBL_BOARD_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2021-05-31 06:23:52 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F4E1F99-B9D1-D584-083D-D2DA67C46831"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
