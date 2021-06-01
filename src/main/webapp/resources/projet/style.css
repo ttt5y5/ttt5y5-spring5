@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.display {
+    background-color: rgb(203, 203, 203);
+    padding: 15px;
+    width: 255px;
+    text-align: 250px;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+button {
+    padding: 10px;
+    width: 67px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: rgb(196, 196, 196);
+    color: black;
+    font-size: 20px;
+    border: solid 0px;
+}
+#r1-1 {
+    width: 140px;
+}
+#r5-1 {
+    width: 140px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+button:active {
+    background-color: rgb(143, 143, 143);
+}
