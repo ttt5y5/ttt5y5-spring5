@@ -77,6 +77,17 @@
 <colAssociation fkAssociation="635AB676-B848-AFE6-6773-795502F27A33" referredColumn="ACC7A50E-DAD9-7743-E65B-17B47D94A80F"/>
 </associations>
 </Column>
+<Column name="TBL_BOARD_BOARD_TYPE" id="AFF01736-3CC1-7920-BD5B-0CDDC65A8A61">
+<createdBy>User</createdBy>
+<createdTime>2021-06-01 00:38:06 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="FF3E6F4F-81C0-CB0D-13A5-99355AD2460C" name="TBL_ATTACH_PK">

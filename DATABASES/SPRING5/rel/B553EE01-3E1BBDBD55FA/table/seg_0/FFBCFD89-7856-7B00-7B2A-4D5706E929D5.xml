@@ -102,11 +102,22 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>11</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="C233A339-3522-830E-70F2-5B09278F50B9" referredColumn="ACC7A50E-DAD9-7743-E65B-17B47D94A80F"/>
 </associations>
+</Column>
+<Column name="TBL_BOARD_BOARD_TYPE" id="D71A708B-B15A-0462-659B-65CFAA619022">
+<createdBy>User</createdBy>
+<createdTime>2021-06-01 00:38:06 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
