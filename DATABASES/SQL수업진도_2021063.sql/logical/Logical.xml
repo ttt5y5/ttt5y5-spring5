@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="8B5DF3C1-15F1-75D0-A69C-EBD1FC9E4B43" mainViewID="C4B0E7A8-56C8-AA2F-11A7-E6B72406495E">
+<createdBy>User</createdBy>
+<createdTime>2021-06-03 03:50:21 UTC</createdTime>
+<ownerDesignName>SQL수업진도_2021063.sql</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
