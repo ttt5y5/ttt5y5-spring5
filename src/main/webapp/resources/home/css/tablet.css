@@ -81,7 +81,8 @@
 		padding-right: 0px;
 	}
 	/* //상단로고와 메뉴스타일 */
-    	/* 컨테이너영역 */
+
+    /* 컨테이너영역 */
 	#container {
 		padding-bottom: 20px;
 		width: auto;
@@ -92,7 +93,6 @@
 	ul.viewImgList li {
 		height: 550px;
 	}
-
 	/* //슬라이드영역 */
 	/* 최신겔러리 */
 	.about_area h2 {
@@ -107,14 +107,14 @@
 		box-sizing: border-box;
 		padding: 0px 20px;
 	}
-	.place_list li:first-child{
+	.place_list li:first-child {
 		margin-left: 0px;
 	}
 	.place_list li {
-		float: left; /*세로배치를 가로배치로 */
-		width: 32%; 
+		float: left;/* 세로배치를 가로배치로 바꾸는 명령 */
+		width: 32%; /* 32%x3=96%, 3개 사이 2%씩이면 = 4%가 여백, 전체 100% */
 		margin-left: 2%;
-		position: relative; /* li 태그 안쪽 이미지,제목 위치의 기준값*/
+		position: relative; /* li태그의 안쪽 겔러리 이미지,제목 위치의 기준값 */
 		top: -50px;
 		padding: 0px;
 	}
@@ -125,9 +125,9 @@
 	.place_list li .view {
 		margin-top: 20px;
 	}
-
 	/* //최신겔러리 */
-    	/* 전화상담과 최근공지사항 */
+
+    /* 전화상담과 최근공지사항 */
 	.appbbs_area {
 		padding: 60px 0px;
 	}
@@ -138,36 +138,36 @@
 	.app_line {
 		display: inherit;
 		float: left;
-		width: 65%; /* 35%가 최근공지사항영역 */
+		width: 65%; /* 나머지 35%가 최근공지사항영역 */
 		box-sizing: border-box;
 		padding: 46px 0px;
-		background: url(../img/bg_app.jpg); /*단일색상이라 no-repeat 필요없음 */
-		font-size: 0px;
+		background: url(../img/bg_app.jpg);/* no-repeat가 필요없음. 단일색상이라서 */
+		font-size: 0px;/* 시각장애을 위해서 존재 */
 		text-align: center;
 	}
 	.app_line a {
-		font-size: 21px;
+		font-size: 19px;
 		display: inline-block;
-		width: 42.4%; /* 65%(app_line)영역 안에서 42.4%*/
+		width: 42.4%;/* 65%(app_line)영역의 42.4%를 가집니다. */
 		height: 100px;
 		line-height: 100px;
 		box-sizing: border-box;
 		padding-left: 55px;
 		text-align: left;
-		background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 10px 50%;
+		background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 10px 50%;/* 10px 가로위치, 50% 세로가운데위치 */
 		border: 2px solid #fff;
 		color: #fff;
-		vertical-align: middle; /*세로가운데정렬 */
+		vertical-align: middle;/* 세로가운데정렬 */
 		margin-right: 10px;
 	}
-	.app_line a + a {
+	.app_line a + a {/* 형제 sibling 태그영역 */
 		background-image: url(../img/ico_phone.png);
 		margin-right: 0px;
 		padding-left: 65px;
 	}
-	.bbs_line {
+	.bbs_line { /* 최신공지사항영역 */
 		float: right;
-		width: 29%;
+		width: 29%; /* 나머지 35%중 29%영역지정 나머지 6%는 여백으로 사용 */
 		border-top: none;
 		padding: inherit;
 	}
@@ -180,15 +180,14 @@
 		padding-left: 14px;
 		background: url(../img/ico_bullet.png) no-repeat 0px 50%;
 		overflow: hidden;
-		text-overflow: ellipsis; /*문자열이 영역을 벗어나면 ... 표시하는 명령 */
-		white-space: nowrap; /* 문자를 자를시 단어를 기준으로 하지 않겟다. */
+		text-overflow: ellipsis;/* 문자열이 영역을 벗어났을 ... 표시하는 명령 */
+		white-space: nowrap;/* 문자를 자를때 단어를 기준으로 하지 wrapping 않겠다. */
 	}
 	/* //전화상담과 최근공지사항 */
-    
-    	/* 푸터영역 */
+
+    /* 푸터영역 */
 	footer {
-		padding: inherit; 
-		text-align: left;
+		padding: inherit;/* 상속:부모 영역의 패딩속성을 상속받겠다. */
 	}
 	.foot_area {
 		padding-left: 20px;
@@ -199,20 +198,17 @@
 		line-height: 1.4;
 	}
 	.br_line {
-		display: inherit; /* 모바일에서 적용햇던 스타일 해제 */
+		display: inherit; /* 모바일에서 적용했던 스타일 해제 하겠다는 의미  */
 	}
 	.snslink {
-		position: absolute;
+		position: absolute;/* 현재 태그를 고정위치로 만들겠다. */
 		right: 20px;
 		top: 20px;
 		width: auto;
 		margin: inherit;
 	}
 	.snslink li {
-		margin-left:  15px;
+		margin-left: 15px;
 	}
-
-
 	/* //푸터영역 */
-
 }
