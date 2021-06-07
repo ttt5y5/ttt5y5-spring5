@@ -21,7 +21,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 /**
  * 이 클래스는 오라클과 연동해서 CRUD를 테스트하는 클래스 입니다.
  * 과장(이사,팀장) Junit CRUD 까지 만들어서 일반사원에게 공개 + 회원관리
- * @author 유지강
+ * @author 황선호
  *
  */
 //RunWith인터페이스 현재클래스가 Junit실행클래스라고 명시
@@ -36,6 +36,16 @@ public class DataSourceTest {
 	@Inject //인제트는 스프링에서 객체를 만드는 방법, 이전자바에서는new키워드로 객체를 생성,  
 	DataSource dataSource; //Inject로 객체를 만들면 메모리관리를 스프링이 대신해줌.
 	//Inject 자바버전 8부터지원 그러면 이전 자바7에서 @Autowired 로 객체를 만들었습니다 같은기능
+	
+	//스프링 코딩 시작 순서
+	//M-V-C 사이에 데이터를 입출력하는 임시저장공간(VO클래스-멤버변수+Get/Set메서드) 생성
+	//보통 ValueObject클래스는 DB테이블과 1:1로 매칭이 됨.
+	//1. MemberVO.java VO 클래스를 생성.
+	//2. DB(마이바티스)쿼리를 만듦 (VO사용)
+	@Test
+	public void selectMember() throws Exception{
+		//회원관리 테이블에서 더미로 입력한 100개의 레코드를 출력 메서드 테스트 ->회원관리목록출력
+	}
 	
 	@Test
 	public void oldQueryTest() throws Exception{
