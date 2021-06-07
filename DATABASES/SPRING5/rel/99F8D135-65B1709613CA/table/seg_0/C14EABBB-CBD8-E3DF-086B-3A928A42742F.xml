@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C14EABBB-CBD8-E3DF-086B-3A928A42742F" schemaObject="AE76B811-2E09-A2B9-71EB-47E445CBC57B" name="TBL_ATTACH">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_ATTACH</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 04:57:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[첨부파일관리테이블]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SAVE_FILENAME" id="0B3F8500-99DD-C71D-41AC-8A26D4DE92F1">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>SAVE_FILENAME</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 04:59:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[물리적으로저장되는파일명(해시데이터)]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REAL_FILE_NAME" id="1F7C0003-2722-2CA8-0CC6-96E9E6CFC659">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>REAL_FILE_NAME</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:01:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[한글파일명으로UI에서보이게]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_DATE" id="26D551B1-B522-6151-76C6-F511007108BE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:04:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일자]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BNO" id="7905BC2B-359B-FC22-A9E0-E5D68CF60F2C">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_ATTACH</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:06:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[부모테이블의고유키]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5E3333C-DC6D-D9A0-62C1-CF619E3912D0" referredColumn="BC4AA8C8-EDAF-84DE-B3C1-A3E860777A05"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07EE1618-0915-0A1E-0EFB-632B24A20AEB" name="TBL_ATTACH_TBL_BOARD_FK">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:06:33 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7905BC2B-359B-FC22-A9E0-E5D68CF60F2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

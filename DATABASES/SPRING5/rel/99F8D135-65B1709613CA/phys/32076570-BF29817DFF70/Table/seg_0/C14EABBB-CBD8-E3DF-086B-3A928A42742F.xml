@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="TBL_ATTACH" directorySegmentName="seg_0" id="C14EABBB-CBD8-E3DF-086B-3A928A42742F">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 04:57:36 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<schemaObject>AE76B811-2E09-A2B9-71EB-47E445CBC57B</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A3055C21-F7E0-80CC-73C6-19967182408D</segment>
+<tableSpace>E51E0164-6039-7F2B-5BE8-7ED6A684FF15</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SAVE_FILENAME" id="0B3F8500-99DD-C71D-41AC-8A26D4DE92F1">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 04:59:50 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REAL_FILE_NAME" id="1F7C0003-2722-2CA8-0CC6-96E9E6CFC659">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:01:04 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REG_DATE" id="26D551B1-B522-6151-76C6-F511007108BE">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:04:24 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BNO" id="7905BC2B-359B-FC22-A9E0-E5D68CF60F2C">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:06:22 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TBL_ATTACH_TBL_BOARD_FK" id="07EE1618-0915-0A1E-0EFB-632B24A20AEB">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 05:06:33 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyOraclev11g>

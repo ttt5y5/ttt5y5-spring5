@@ -40,4 +40,3 @@
 <!-- <script src="/resources/admin/dist/js/demo.js"></script> -->
 </body>
 </html>
-    

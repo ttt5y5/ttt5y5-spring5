@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8ED87F1C-DAB8-B9B2-9D5A-F95C944AEE08" schemaObject="AE76B811-2E09-A2B9-71EB-47E445CBC57B" name="TBL_REPLY">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:24:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[댓글관리테이블]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RNO" id="237F8160-B78B-521B-001C-8F6812B84CF6">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>RNO</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:25:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[댓글고유번호(자동증가AI)]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLY_TEXT" id="2CD8857A-0554-79F4-9BCC-1BC699DDAC92">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REPLY_TEXT</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:37:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[댓글내용]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLYER" id="C2629E61-49BC-5B79-8EBA-90959E97A3DC">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REPLYER</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:37:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[댓글작성자ID]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_DATE" id="559E058D-3880-D8C9-EE60-4A848EE4B3AE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:38:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[등록일]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPDATE_DATE" id="7C3BAB20-9E4F-3ABF-4A67-D68690B247E3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>UPDATE_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:38:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[수정일]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BNO" id="0BF89ED9-444F-08E0-A89C-EB9DA5C402CB">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TBL_REPLY</sourceObjSchema>
+<sourceObjName>BNO</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:46:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[게시물관리고유값외래키]]></commentInRDBMS>
+<ownerDesignName>SPRING5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E01B998-A02C-B058-D5E8-9F525F4D7711" referredColumn="BC4AA8C8-EDAF-84DE-B3C1-A3E860777A05"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F406D569-1FB0-12E3-F716-4B2E59E36449" name="TBL_REPLY_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY_PK</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:25:19 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="237F8160-B78B-521B-001C-8F6812B84CF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="90C24347-E74F-61C1-2FE0-6A2C8298394B" schemaObject="AE76B811-2E09-A2B9-71EB-47E445CBC57B" name="TBL_REPLY_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>XE</sourceObjSchema>
+<sourceObjName>TBL_REPLY_PK</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 07:30:28 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<importedID>ED05C347-6D8C-4FC1-ADCA-C99D5AA71AD2</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="237F8160-B78B-521B-001C-8F6812B84CF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65CD5A18-7815-CE2C-BEBE-38E13A77C1B8" name="TBL_REPLY_TBL_BOARD_FK">
+<createdBy>User</createdBy>
+<createdTime>2021-05-31 03:47:15 UTC</createdTime>
+<ownerDesignName>SPRING5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BF89ED9-444F-08E0-A89C-EB9DA5C402CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
