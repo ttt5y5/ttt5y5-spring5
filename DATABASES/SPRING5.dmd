@@ -1,13 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SPRING5" id="1155CB9A-25E0-9493-3823-E06F0CAA3F18" version="3.5">
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SPRING5" id="469CB2B2-DD86-58F4-2D9F-BFE1607D26F7" version="3.5">
 <createdBy>User</createdBy>
-<createdTime>2021-05-31 02:35:59 UTC</createdTime>
+<createdTime>2021-05-31 01:38:30 UTC</createdTime>
 <ownerDesignName>SPRING5</ownerDesignName>
 <capitalNames>false</capitalNames>
-<designId>1155CB9A-25E0-9493-3823-E06F0CAA3F18</designId>
-<usedDesignStorageDescriptors>
-<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="2569E473-81AF-26CA-1E8A-39784876538E">
-<designStoragePath>C:\egov\workspace\yujigang-spring5\DATABASES</designStoragePath>
-</designDescr>
-</usedDesignStorageDescriptors>
+<designId>469CB2B2-DD86-58F4-2D9F-BFE1607D26F7</designId>
 </OSDM_Design>
