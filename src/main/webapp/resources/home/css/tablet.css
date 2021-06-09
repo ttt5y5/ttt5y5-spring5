@@ -148,13 +148,13 @@
 	.app_line a {
 		font-size: 19px;
 		display: inline-block;
-		width: 47%;/* 65%(app_line)영역의 42.4%를 가집니다. */
+		width: 42.4%;/* 65%(app_line)영역의 42.4%를 가집니다. */
 		height: 100px;
 		line-height: 100px;
 		box-sizing: border-box;
-		padding-left: 85px;
+		padding-left: 55px;
 		text-align: left;
-		background: rgba(0,0,0,0.3) url(../img/ico_kakao.png) no-repeat 10px 50%;/* 10px 가로위치, 50% 세로가운데위치 */
+		background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 10px 50%;/* 10px 가로위치, 50% 세로가운데위치 */
 		border: 2px solid #fff;
 		color: #fff;
 		vertical-align: middle;/* 세로가운데정렬 */

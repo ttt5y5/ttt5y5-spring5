@@ -19,12 +19,12 @@
 <link rel="stylesheet" href="/resources/home/css/tablet.css">
 <!-- PC용 CSS 임포트 -->
 <link rel="stylesheet" href="/resources/home/css/pc.css">
-<!-- 게시판 CSS 임포트 -->
+<!-- 게시판용 CSS 임포트 -->
 <link rel="stylesheet" href="/resources/home/css/board.css">
 <script src="/resources/home/js/main.js"></script>
 <!-- 메인슬라이드 코어 임포트 -->
 <script src="/resources/home/js/slidemain.js"></script>
-<!-- html5가 아닌 JS 유효성 검사 코어 2개 임포트 -->
+<!-- html5가 아닌 JS로 유효성 검사 코어 2개 임포트 -->
 <script src="/resources/home/js/jquery.validate.js"></script>
 <script src="/resources/home/js/additional-methods.js"></script>
 <style>
@@ -45,9 +45,9 @@
 $(document).ready(function() {
 	$('.appForm').validate({
 		rules:{
-			password:"required", //password 인풋태그의 이름,입력값 공백체크
-			password_chk: {		 //password_chk 인풋태그의 이름.
-				equalTo:'#password_lbl' //input 태그의 id값과 비교
+			password:"required",//password 인풋태그의 이름,입력값 공백체크
+			password_chk: {     //password_chk 인풋태그의 이름.
+				equalTo:'#password_lbl'//input 태그의 id값과 비교
 			}
 		}
 	});
@@ -146,7 +146,9 @@ $(document).ready(function() {
 					</li>
 					<li class="clear">
 						<label for="password_lbl" class="tit_lbl pilsoo_item">비밀번호</label>
-						<div class="app_content"><input type="password" name="password" class="w100p" id="password_lbl" placeholder="비밀번호를 입력해주세요" required/></div>
+						<div class="app_content">
+							<input type="password" name="password" class="w100p" id="password_lbl" placeholder="비밀번호를 입력해주세요" required/>
+						</div>
 					</li>
 					<li class="clear">
 						<label for="password_chk_lbl" class="tit_lbl pilsoo_item">비밀번호확인</label>

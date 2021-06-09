@@ -186,7 +186,7 @@ $(document).ready(function() {
 						</div>
 					  </div>
 					  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-						<button type="button" class="btn btn-warning" id="btn_reply_write" >댓글등록</button>
+						<button type="button" class="btn btn-warning" id="btn_reply_write">댓글등록</button>
 					  </div>
 					</div>
 				  </div>
@@ -330,34 +330,34 @@ $(document).ready(function() {
 </div>
 <!-- /.modal -->
 <script>
-   //오리지날 페이징처리 함수형 변수
+// 오리지널방식 페이징처리 함수형 변수(아래)
 var printPagingList = function(pageVO, target) {
-   $(target).html('');
-//pageVO = 스프링에서 받은 json 데이터, pageVO.prev(이전데이터가 있다면 true), pageVO.next(다음데이터 있다면 true), pageVO=5페이지로 가정
-      var pagination = ''; //문자열 누적변수
-      //Previous 출력 아래
-      pagination += '<li class="paginate_button page-item previous disabled" id="example2_previous">';
-      pagination += '<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
-      pagination += '</li>'; //pagintion = pagination + '</il>'; //여기 previous
-      var active = '';
-      for(var i=0; i<pageVO; i++) { 
-         if(i==0) { active = 'active'; } else {active = '';}
-         pagination += '<li class="paginate_button page-item ">';
-			pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>';
-		   pagination += '</li>';
-      }
-      //nest 출력(아래)
-      pagination += '<li class="paginate_button page-item next" id="example2_next">';
-      pagination += '<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
-      pagination += '</li>';
-      $(target).append(pagination);
+	$(target).html('');// tartget 의 내용만 지우고, target은 남아있음.
+//pageVO = 스프링에서 받은 json데이터, 변수3개 pageVO.prev(이전데이터가 있다면 true), pageVO.next(다음데이터 있다면 true), pageVO=5페이지로 가정
+	var pagination = '';//문자열 누적변수
+	//Previous 출력(아래)
+	pagination += '<li class="paginate_button page-item previous disabled" id="example2_previous">';
+	pagination += '<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
+	pagination += '</li>';//pagination = pagination + '</li>';//여기 Previous
+	var active = '';
+	for(var i=0; i<pageVO; i++) {
+		if(i==0) { active = 'active'; } else { active = ''; }
+		pagination += '<li class="paginate_button page-item '+active+'">';
+		pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>';
+		pagination += '</li>';
+	}
+	//Next 출력(아래)
+	pagination += '<li class="paginate_button page-item next" id="example2_next">';
+	pagination += '<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
+	pagination += '</li>';
+	$(target).append(pagination);
 };
 
-//템플릿방식 댓글리스트처리 함수형 변수(아래)
+// 템플릿방식 댓글리스트처리 함수형 변수(아래)
 var printReplyList = function(data, templateData, target) {
 	var template = Handlebars.compile(templateData.html());//템플릿을 태그로 변환
 	var html = template(data);//파싱처리
-	$('.div_template').remove();//기존 댓글데이터 누적을 방지 taget안쪽의 자식만지움
+	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target안쪽의 자식만지움
 	target.prepend(html);
 };
 	$(document).ready(function(){
@@ -377,7 +377,7 @@ var printReplyList = function(data, templateData, target) {
 					//함수의(인자=아규먼트=매개변수=파라미터)
 					//printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'), $('#collapseReply'));
-               printPagingList(5, '.pagination')
+					printPagingList(5, '.pagination');
 				},
 				error:function() {
 					alert('RestAPI서버가 작동하지 않습니다.');
@@ -391,18 +391,17 @@ var printReplyList = function(data, templateData, target) {
 				url:'./board_view.html',//RestAPI URL 입력
 				dataType:'text',
 				success:function(result) {
-					// alert('댓글 등록 성공');
-               result = [
+					result = [
 						{rno:3,bno:2,reply_text:'세번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345},
 						{rno:2,bno:2,reply_text:'두번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345},
-                  {rno:1,bno:2,reply_text:'첫번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345}
+						{rno:1,bno:2,reply_text:'첫번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345}
 					];
 					//자바스크립트는 함수기반 구조화된 언어
 					//위 result데이터를 #template에 바인시키는 함수호출(아래)
 					//함수의(인자=아규먼트=매개변수=파라미터)
 					//printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'), $('#collapseReply'));
-               printPagingList(6, '.pagination')
+					printPagingList(6, '.pagination');
 				},
 				error:function() {
 					alert('RestAPI서버가 작동하지 않습니다.');
