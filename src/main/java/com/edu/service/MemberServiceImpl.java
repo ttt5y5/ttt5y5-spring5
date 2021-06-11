@@ -14,7 +14,7 @@ import com.edu.vo.PageVO;
  * 이 클래스는 회원관리 서비스 인터페이스를 구현하는 클래스.
  * 상속 extends, 구현 implements 키워드를 사용
  * 스프링빈으로 등록하려면, @Service 애너테이션을 명시.
- * @author 김일국
+ * @author 황선호
  *
  */
 @Service

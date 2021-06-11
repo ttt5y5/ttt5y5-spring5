@@ -18,7 +18,7 @@ import com.edu.vo.PageVO;
 /**
  * 이 클래스는 Admin관리자단을 접근하는 클래스
  * 변수 Object를 만들어서 jsp로 전송 <-> jsp 폼값을 받아서 Object로 처리
- * @author 김일국
+ * @author 황선호
  *
  */
 @Controller
