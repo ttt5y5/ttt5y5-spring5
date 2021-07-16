@@ -4,12 +4,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FilenameUtils;
@@ -21,6 +24,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -164,7 +168,7 @@ public class CommonUtil {
 		return checkImgArray;
 	}
 	
-	//RestAPI서버 맛보기ID중복체크(제대로 만들면 @RestController 사용)
+	//관리자단에서 사용:RestAPI서버 맛보기ID중복체크(제대로 만들면 @RestController 사용)
 	@RequestMapping(value="/id_check", method=RequestMethod.GET)
 	@ResponseBody //반환받은 값의 헤더값을 제외하고, 내용(body)만 반환하겠다는 명시
 	public String id_check(@RequestParam("user_id")String user_id) throws Exception {
@@ -178,6 +182,19 @@ public class CommonUtil {
 			}
 		}
 		return memberCnt;//0.jsp 이렇게 작동하지 않습니다. 이유는 @ResponseBody때문이고, RestAPI는 값만 반환
+	}
+	//사용자단에서 사용: JsonView방식으로 RestApi를 구현실습
+	@RequestMapping(value="/id_check_2010",method=RequestMethod.GET)
+	public String id_check_2010(@RequestParam("user_id")String user_id,Model model) throws Exception {
+		String memberCnt = "1";//중복ID가 있는것을 기본값으로 지정
+		if(!user_id.isEmpty()) {
+			MemberVO memberVO = memberService.readMember(user_id);
+			if(memberVO == null) {//중복ID가 없다면
+				memberCnt = "0";
+			}
+		}
+		model.addAttribute("memberCnt", memberCnt);//자바List,VO,String객체를 json객체로 반환함.
+		return "jsonView";//jsp파일명 대신에 servlet에서 정의한 스프링빈 ID명을 적으면, json객체로 결과를 반환합니다.
 	}
 
 	//파일 업로드 공통 메서드(Admin컨트롤러에서 사용 + Home컨트롤러에서도 사용)
@@ -194,5 +211,28 @@ public class CommonUtil {
 		File target = new File(uploadPath, saveFileName);
 		FileCopyUtils.copy(fileData, target);//파일이 물리적으로 폴더에 저장됨.
 		return saveFileName;//UUID로 생성된 식별값의 파일명 
+	}
+
+	public void profile_upload(String user_id, HttpServletRequest request, MultipartFile file) throws IOException {
+		// TODO 프로필이미지는 보안이 필요한 폴더가 아닌, resources폴더에 업로드 처리. 서버의 경로필요
+		String folderPath = request.getServletContext().getRealPath("/resources/profile");//url로 업로드할 수 없기 때문에, 서버경로를 구하는 명령
+		File makeFolder = new File(folderPath);//공백인 파일 객체가 생성
+		if(!makeFolder.exists()) {
+			makeFolder.mkdir();//여기서 신규폴더가생성이 됩니다.
+		}
+		//1개에 파일이 1000개 이상이면, 조회속도가 엄청느리짐.
+		//년월폴더를 생성 후, 해당년월에 업로드된 파일은 년월폴더로 관리.
+		byte[] fileData = file.getBytes();
+		File target = new File(makeFolder,user_id+".png");//user_id는 PK이기 때문에 기존파일있다면, 덮어쓰면서 저장됩니다.
+		FileCopyUtils.copy(fileData, target);//첨부파일이 저장이 됩니다.
+	}
+
+	public void profile_delete(String user_id, HttpServletRequest request) {
+		// TODO 프로필 이미지가 프로필폴더에 존재하면 삭제하는 로직
+		String folderPath = request.getServletContext().getRealPath("/resources/profile");
+		File target = new File(folderPath,user_id+".png");
+		if(target.exists()) {
+			target.delete();//프로필파일이 실제로 지워짐.
+		}
 	}
 }

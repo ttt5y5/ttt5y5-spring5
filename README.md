@@ -13,27 +13,153 @@
 - 사용자단 로그인 화면 JSP로 만들기.
 - 로그인처리 및 관리자 권한체크 기능 추가(8.스프링시큐리티구현).
 - 사용자단 회원가입, 수정, 탈퇴 JSP기능 추가.
-- ======== 3주간 작업내역 끝(07.02금) ===================
-- ======== 2주간 작업내역 시작 (사용자단은 관리자단 로직을 사용합니다.)========
 - 헤로쿠 클라우드 준비작업.
 - 관리자단 대시보드작업.
 - 사용자단 게시판 CRUD 처리.
-- 사용자단 댓글 CRUD 처리.
 - 헤로쿠 클라우드에 배포(9.클라우드 배포CI/CD구현-개발트렌드).깃(최신소스)-연동-헤로쿠(배포)
+- 사용자단 댓글 CRUD 처리.
 - 문서작업(제출용)
 - [실습시간이 가능하다면: 관리자대시보드에서 회원ID 이미지업로드 및 보이기 처리)]
-- [실습시간이 가능하다면: 알고리즘 다이어그램기반으로 자바코딩테스트]
 - [실습시간이 가능하다면: 사용자단 네이버아이디로그인 처리(10.외부RestAPI구현).]
-- ======== 2주간 작업내역 끝(07.16금) ===================
+- [실습시간이 가능하다면: 알고리즘 다이어그램기반으로 자바코딩테스트]
 - 헤로쿠 클라우드에 배포할때, 매퍼폴더의 mysql폴더내의 쿼리에 now()를 date_add(now(3), interval 9 HOUR) 변경예정.(이유는 DB서버 타임존 미국이기 때문에)
+#### 작업일정.
+- 7월9일(금) 모두 줌으로 수업
+- 7월12(월) 학원이사로 휴강
+- 7월13(화) 이사한 학원에서 수업시작(A조대면,B조줌)
+- 7월20(화) 강사 황선호 수업 종료.
 
-#### 20210708(목) 작업예정.
-- 사용자단 게시물관리 CRUD중 Delete마무리 후, Update 실습
-- JsonView방식(고전방식의 RestAPI처리) 실습.
+#### 앞으로 남은 1주일간 작업예정내용 정리.
 - 사용자단 메인페이지(대시보드) 작업예정.
-- 헤로쿠 30분 지나서 휴면모드로 들어가기전, 잠깨우는 기능 추가예정.(스프링스케줄러사용)
+- 사용자단 네이버아이디로그인 처리(10.외부RestAPI구현).
+- 문서작업(제출용)예정.
+- 관리자대시보드에서 회원ID 이미지업로드 및 보이기 처리예정.(기술참조 https://github.com/miniplugin/kimilguk )
+- jsp템플릿인 tiles(타일즈), siteMesh(사이트메쉬), velocity(벨로시티) 등이 있습니다.
+- 현업에서는 위 3가지 템플릿중 1가지는 항상 사용하기 때문에 대표적으로 타일즈를 실습할 예정입니다.
+- 위 3가지 구조는 비슷하기 때문에 1가지만 아셔도 다른 jsp템플릿 적용시 응용가능합니다.
+- 알고리즘 다이어그램기반으로 자바코딩테스트예정(깃 it강의저장소자료이용).
+
+#### 데이터의 이동
+- VO클래스의 이동: 매퍼쿼리<->DAO(M)<->Service<->Controller(C)<->jsp(V)
+
+#### 변수값(데이터) ReplyVO데이터클래스를 기준으로
+- JSON데이터: 크롬에서 부메랑으로 List<ReaplyVO>형태의 데이터확인
+- JSON데이터구조: ArrayList(표) + HashMap(Key:Value)
+
+```
+{
+    "rno": 4,
+    "reply_text": "부메랑댓글 입력테스트",
+    "replyer": "admin",
+    "reg_date": 1626310996371,
+    "update_date": 1626310996371,
+    "bno": 2
+},
+{
+    "rno": 3,
+    "reply_text": "부메랑댓글 입력테스트",
+    "replyer": "admin",
+    "reg_date": 1626310964420,
+    "update_date": 1626310964420,
+    "bno": 2
+}
+```
+- ArrayList데이터형:List<ReplyVO> replyList = new ArrayList<ReplyVO>();//DB쿼리결과
+- 위 ArrayList구조: List(인터페이스) > ArrayList(임플리먼트클래스-데이터클래스)
+- HashMap데이터형:Map<String,Object> mapData = new HashMap<String,Object>();
+- 위 HashMap구조: Map(인터페이스-메서드명) > HashMap(구현클래스)
+- Hash해시태그: 그물망(해시)=#=좌표(x,y)=(Key:Value)
+
+#### 20210716(금) 작업예정.
+- 수업전 헤로쿠에 배포 후 어제 작업한 결과 확인해 보겠습니다.
+- jsp템플릿인 tiles(타일즈) 사용.
+- 알고리즘 다이어그램기반으로 자바코딩테스트예정(깃 it강의저장소자료이용).
+
+#### 20210715(목) 작업.
+- 데이터의 이동과 변수값처리 2가지만 아시면, 개발자로 일할 수 있음.
+- 문서작업(제출용)확인OK.(설명 후 작업시간 드릴 예정, 작업시간중 네아로 않되는 분 확인)
+- 관리자대시보드에서 회원ID 이미지업로드 및 보이기 처리예정.
+- C:\egov\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\kimilguk-spring5\resources\profile
+- URL로 접근할때는 http://localhost:8080/resources/profile/admin22
+
+#### 20210714(수) 작업.
+- 네아로 로그인 부분 마무리.: 외부API이고, 네이버 개발자들이 만든내용.
+- 요청 URL생성 -> 인증체크(네이버로그인컨트롤러 메서드추가) -> 성공/실패/취소시 callback URL로 이동해서 처리하는 메서드 생성
+- 문서작업(제출용)예정.
+- 관리자대시보드에서 회원ID 이미지업로드 및 보이기 처리예정.
+- jsp템플릿인 tiles(타일즈) 사용.
+
+#### 20210713(화) 작업.
+- 사용자단 메인페이지(대시보드) 작업OK.
+- 사용자단 네이버아이디로그인 처리(10.외부RestAPI구현).
+- 네이버 개발자 센터에 가입이 되어 있어야 합니다.
+- 서비스URL(사이트의 로그인URL) -> 네이버로그인폼으로진행(스프링시큐리티로그인무시)
+- 네이버로그인폼에서 인증을 받으면(RestAPI에서 OAuth2.0인증) -> 서비스되는 사이트로 돌아오기(사이트URL필요=@RequestMapping필요=콜백URL필요):시프링시큐리티 로직을 타야 합니다.
+- 콜백메서드에서 하는 작업: enabled, ROLE_USER권하부여 , session_값 지정을 할 수 있습니다.
+- login_success는 스프링시큐리티의 인증성공 후 이동할 URL위치를 구현한 메서드
+- naver_callback은 네이버OAuth2.0 인증성공 후 이동할 URL위치를 구현한 메서드
+
+#### 20210709(금) 작업.
+- 게시물 CRUD시 본인글 인지 확인 하는 메서드를 공통으로 구현하기(많이사용하는 방향으로)OK.
+
+```
+@Around("execution(* com.edu.controller.HomeController.board_delete(..)) || execution(* com.edu.controller.HomeController.board_update*(..))")
+    public Object board_deleteMethod(ProceedingJoinPoint pjp) throws Throwable {
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+		if(request != null) {//jsp에서 Get,Post 있을때,
+			BoardVO boardVO = null;
+			String user_id = null;
+			Integer bno = null;
+			logger.info("디버그 메서드네임 가져오기 : " + pjp.getSignature().getName());//기술참조 https://alwayspr.tistory.com/34
+			for(Object object:pjp.getArgs()) {
+				if(object instanceof Integer) {//AOP실행메서드중 매개변수 판단
+					//파마미터가 bno일때 게시판의 writer를 가져오기
+					bno = (Integer) object;
+					boardVO = boardService.readBoard(bno);//아래 조건때문에 추가
+					user_id = boardVO.getWriter();
+				}
+				if(object instanceof BoardVO) {
+					//파라미터가 BoardVO 클래스객체 일때 writer를 가져오기
+					boardVO = (BoardVO) object;
+					user_id = boardVO.getWriter();
+				}
+			}
+			HttpSession session = request.getSession();//클라이언트PC에서 스프링프로젝트 접근시 세션객체
+			if( !user_id.equals(session.getAttribute("session_userid")) && "ROLE_USER".equals(session.getAttribute("session_levels")) ) {
+				FlashMap flashMap = new FlashMap();
+				flashMap.put("msgError", "게시물은 본인글만 수정/삭제 가능합니다.");
+				FlashMapManager flashMapManager = RequestContextUtils.getFlashMapManager(request);
+				flashMapManager.saveOutputFlashMap(flashMap, request, null);
+				String referer = request.getHeader("Referer");//크롬>네트워크>파일>Referer>이전페이지 URL이 존재
+				return "redirect:"+referer;
+			}
+		}
+		Object result = pjp.proceed();//여기서 조인포인트가 실행됩니다.
+		return result;
+	}
+```
+- 사용자단 댓글서비스 작업.(기술참조: http://www.ktword.co.kr/abbr_view.php?m_temp1=5782 )
+- Ajax소스는 프로그램이기 때문에, 디자인과 크게관련없기때문에, admin단 board_view에 있는 
+- ajax코드를 가져다가 사용하면서 커스터마이징.($.ajax에서 complete, beforeSend, async 속성들)
+- ajax에서 디버그하는 방법.
+- 헤로쿠 30분 지나서 휴면모드로 들어가기전, 잠깨우는 기능 추가예정.(스프링 스케줄링사용)
+- 순서1: 외부 모듈 라이브러리 추가(pom.xml에서) -> 메이븐업데이트 -> 
+- 순서2: 스케줄링할 메서드 생성(herokuJobMethod) -> root-context에서 스케줄링 스프링빈 생성
+- 보통 스프링스케줄러를 이용해서 회원들에게 시간기준의 특별한 이벤트가 발생할때, 일괄적으로 메일보내기 기능에 사용.
 - 이력서 작업한 URL을 포트폴리오로 적어 놓으실때, 면접관이 1분정도 대기시간이 필요.
 - 헤로쿠클라우드는 처음접속시 1분정도 대기시간이 필요함(이력서에 명시)
+
+#### 20210708(목) 작업.
+- 사용자단 게시물관리 CRUD중 Delete마무리 후, Update 실습
+- 우리나라 스프링기반 솔루션을 만들던 시기(스프링버전2.5 - 2015년 전후) Rest-Api(jsonview방식), 현재(2021년 스프링버전 5.x사용) Rest-Api(@RestController방식-,@ResponseBody)
+- properties파일을 hsql,cloude 를 1개 cloud통일
+- JsonView방식(고전방식의 RestAPI처리) 실습.
+- JsonView: 컨트롤러에서 뷰단을 반환할때 .jsp(생략)파일명으로 반환(View리졸버의 기본형식)
+- servlet-context.xml에 위 View리졸버라는 스프링빈 설정이 있습니다.
+- 리퀘스트매핑요청에대한 뷰단을 해석(바인딩해 줍니다.)
+- 위 기능을 RestAPI로 대체해서 컨트롤러에서 뷰단을 반환할때 jsp로 반환하지 않고, Json으로 뷰를 반환하는 것을 JsonView 방식이라고 합니다.
+- JsonView방식 사용방법: 1. servlet설정에 스프링빈을 등록합니다.(클래스는 스프링프레임워크에 내장, pom.xml외부 라이브러리모듈을 가져올 필요 없음.)
+- 사용자단에서는 글수정을 글쓴 보인글만 삭제/수정 가능하게 기능추가.(단, 관리자단에서는 admin은 모두 수정/삭제가능)
 
 #### 20210707(수) 작업.
 - 헤로쿠는 30분간 아무작업이 없으면 휴면상태(컨테이너가 내려감) -> 활성상태(컨테이너가 올라감)
